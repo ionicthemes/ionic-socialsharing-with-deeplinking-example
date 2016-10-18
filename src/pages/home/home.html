@@ -1,0 +1,39 @@
+<ion-header>
+  <ion-navbar color="primary">
+    <ion-title>Home</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+  <ion-card *ngFor="let item of items; let i = index" (click)="itemTapped($event, item)">
+
+    <img src="http://lorempixel.com/400/200?v={{i}}"/>
+
+    <ion-card-content>
+      <h2 class="card-title">{{item.title}}</h2>
+      <p>{{item.description}}</p>
+    </ion-card-content>
+
+     <ion-row no-padding>
+       <ion-col>
+         <button ion-button clear small color="danger" icon-left>
+           <ion-icon name='star'></ion-icon>
+           Favorite
+         </button>
+       </ion-col>
+       <ion-col text-center>
+         <button ion-button clear small color="danger" icon-left>
+           <ion-icon name='musical-notes'></ion-icon>
+           Listen
+         </button>
+       </ion-col>
+       <ion-col text-right>
+         <button ion-button clear small color="danger" icon-left>
+           <ion-icon name='share-alt'></ion-icon>
+           Share
+         </button>
+       </ion-col>
+     </ion-row>
+
+  </ion-card>
+</ion-content>
