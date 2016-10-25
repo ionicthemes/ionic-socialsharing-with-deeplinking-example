@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
-import { IonicApp, IonicModule, DeepLinkConfig } from 'ionic-angular';
+import { IonicApp, IonicModule } from 'ionic-angular';
+// import { IonicApp, IonicModule, DeepLinkConfig } from 'ionic-angular';
 import { MyApp } from './app.component';
 import { AboutPage } from '../pages/about/about';
 import { ContactPage } from '../pages/contact/contact';
@@ -8,13 +9,13 @@ import { TabsPage } from '../pages/tabs/tabs';
 import { ItemDetailsPage } from '../pages/item-details/item-details';
 
 
-export const deepLinkConfig: DeepLinkConfig = {
-  links: [
-    { component: AboutPage, name: 'About', segment: 'about' },
-    { component: ContactPage, name: 'Contact', segment: 'contact' },
-    { component: ItemDetailsPage, name: 'Details', segment: 'items/:itemId', defaultHistory: [ HomePage ] }
-  ]
-};
+// export const deepLinkConfig: DeepLinkConfig = {
+  // links: [
+  //   { component: AboutPage, name: 'About', segment: 'about' },
+  //   { component: ContactPage, name: 'Contact', segment: 'contact' },
+  //   { component: ItemDetailsPage, name: 'Details', segment: 'items/:itemId', defaultHistory: [ HomePage ] }
+  // ]
+// };
 
 
 @NgModule({
@@ -27,7 +28,8 @@ export const deepLinkConfig: DeepLinkConfig = {
     ItemDetailsPage
   ],
   imports: [
-    IonicModule.forRoot(MyApp, {}, deepLinkConfig)
+    IonicModule.forRoot(MyApp)
+    // IonicModule.forRoot(MyApp, {}, deepLinkConfig)
   ],
   bootstrap: [IonicApp],
   entryComponents: [

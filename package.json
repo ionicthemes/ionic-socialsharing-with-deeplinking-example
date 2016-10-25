@@ -1,8 +1,7 @@
 {
-  "name": "ionic-hello-world",
-  "author": "Ionic Framework",
-  "homepage": "http://ionicframework.com/",
-  "private": true,
+  "name": "social-sharing-with-deeplinking-example",
+  "author": "IonicThemes",
+  "homepage": "http://ionicthemes.com/",
   "scripts": {
     "build": "ionic-app-scripts build",
     "watch": "ionic-app-scripts watch",
@@ -49,5 +48,5 @@
       "locator": "ios"
     }
   ],
-  "description": "deepLinkingExample: An Ionic project"
+  "description": "This app is part of a tutorial from www.ionicthemes.com that explains how to use SocialSharing with Deep Linking in your Ionic 2 apps"
 }

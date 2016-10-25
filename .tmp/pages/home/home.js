@@ -22,12 +22,10 @@ export var HomePage = (function () {
     };
     HomePage.prototype.shareItem = function (item) {
         // message, subject, file, url
-        SocialSharing.share("Check this item!", item.title, item.img, 'demoapp://home/items/' + item.id).then(function () {
-            // Success!
-            debugger;
-        }).catch(function () {
-            // Error!
-            debugger;
+        SocialSharing.share("Check this item:  demoapp://home/items/" + item.id, item.title, item.img, "demoapp://home/items/" + item.id)
+            .then(function () {
+        })
+            .catch(function () {
         });
     };
     HomePage.decorators = [

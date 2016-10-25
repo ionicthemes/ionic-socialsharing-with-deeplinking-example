@@ -30,12 +30,12 @@ export class HomePage {
 
   shareItem(item) {
     // message, subject, file, url
-    SocialSharing.share("Check this item!", item.title, item.img, 'demoapp://home/items/' + item.id).then(() => {
-      // Success!
-      debugger;
-    }).catch(() => {
-      // Error!
-      debugger;
+    SocialSharing.share("Check this item:  demoapp://home/items/" + item.id, item.title, item.img, "demoapp://home/items/" + item.id)
+    .then(() => {
+
+    })
+    .catch(() => {
+
     });
   }
 

@@ -6,13 +6,13 @@ import { ContactPage } from '../pages/contact/contact';
 import { HomePage } from '../pages/home/home';
 import { TabsPage } from '../pages/tabs/tabs';
 import { ItemDetailsPage } from '../pages/item-details/item-details';
-export var deepLinkConfig = {
-    links: [
-        { component: AboutPage, name: 'About', segment: 'about' },
-        { component: ContactPage, name: 'Contact', segment: 'contact' },
-        { component: ItemDetailsPage, name: 'Details', segment: 'items/:itemId', defaultHistory: [HomePage] }
-    ]
-};
+// export const deepLinkConfig: DeepLinkConfig = {
+// links: [
+//   { component: AboutPage, name: 'About', segment: 'about' },
+//   { component: ContactPage, name: 'Contact', segment: 'contact' },
+//   { component: ItemDetailsPage, name: 'Details', segment: 'items/:itemId', defaultHistory: [ HomePage ] }
+// ]
+// };
 export var AppModule = (function () {
     function AppModule() {
     }
@@ -27,7 +27,7 @@ export var AppModule = (function () {
                         ItemDetailsPage
                     ],
                     imports: [
-                        IonicModule.forRoot(MyApp, {}, deepLinkConfig)
+                        IonicModule.forRoot(MyApp)
                     ],
                     bootstrap: [IonicApp],
                     entryComponents: [
