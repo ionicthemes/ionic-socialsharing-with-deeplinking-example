@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <widget id="com.ionicframework.deeplinkingexample597714" version="0.0.1" xmlns="http://www.w3.org/ns/widgets" xmlns:cdv="http://cordova.apache.org/ns/1.0">
-  <name>Social Sharing with Deeplinking Example</name>
+  <name>Ionic2 Social Sharing with Deeplinking Example</name>
   <description>This app is part of a tutorial from www.ionicthemes.com that explains how to use SocialSharing with Deep Linking in your Ionic 2 apps</description>
   <author email="contact@ionicthemes.com" href="http://ionicthemes.com/">IonicThemes Team</author>
   <content src="index.html"/>

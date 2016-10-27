@@ -12,6 +12,7 @@ export class HomePage {
 
   constructor(private navCtrl: NavController) {
 
+    //this code is to build the dummy data of this example
     for(let i = 1; i < 4; i++) {
       this.items.push({
         id: i,
@@ -22,6 +23,7 @@ export class HomePage {
     }
   }
 
+  //this method gets called when the user taps on a specific item
   itemTapped(item) {
     this.navCtrl.push(ItemDetailsPage, {
       'itemId': item.id
@@ -29,8 +31,9 @@ export class HomePage {
   }
 
   shareItem(item) {
+    //this code is to use the social sharing plugin
     // message, subject, file, url
-    SocialSharing.share("Check this item:  demoapp://home/items/" + item.id, item.title, item.img, "demoapp://home/items/" + item.id)
+    SocialSharing.share("Check this item:  demoapp://home/items/" + item.id, item.title, item.img)
     .then(() => {
 
     })

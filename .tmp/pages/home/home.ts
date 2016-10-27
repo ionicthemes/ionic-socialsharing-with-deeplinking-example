@@ -30,7 +30,7 @@ export class HomePage {
 
   shareItem(item) {
     // message, subject, file, url
-    SocialSharing.share("Check this item:  demoapp://home/items/" + item.id, item.title, item.img, "demoapp://home/items/" + item.id)
+    SocialSharing.share("Check this item:  demoapp://home/items/" + item.id, item.title, item.img)
     .then(() => {
 
     })
