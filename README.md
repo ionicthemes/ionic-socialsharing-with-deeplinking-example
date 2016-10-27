@@ -1,4 +1,4 @@
-## Complete Tutorial in: https://ionicthemes.com/tutorials
+## Complete Tutorial in: https://ionicthemes.com/tutorials/about/ionic2-app-with-socialsharing-and-deeplinking
 
 
 ### Install plugins
