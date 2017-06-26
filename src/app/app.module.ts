@@ -6,7 +6,11 @@ import { ContactPage } from '../pages/contact/contact';
 import { HomePage } from '../pages/home/home';
 import { TabsPage } from '../pages/tabs/tabs';
 import { ItemDetailsPage } from '../pages/item-details/item-details';
-
+import { SocialSharing } from '@ionic-native/social-sharing';
+import { Deeplinks } from '@ionic-native/deeplinks';
+import { SplashScreen } from "@ionic-native/splash-screen";
+import { StatusBar } from "@ionic-native/status-bar";
+import { BrowserModule } from '@angular/platform-browser';
 
 @NgModule({
   declarations: [
@@ -18,6 +22,7 @@ import { ItemDetailsPage } from '../pages/item-details/item-details';
     ItemDetailsPage
   ],
   imports: [
+    BrowserModule,
     IonicModule.forRoot(MyApp)
   ],
   bootstrap: [IonicApp],
@@ -29,6 +34,11 @@ import { ItemDetailsPage } from '../pages/item-details/item-details';
     TabsPage,
     ItemDetailsPage
   ],
-  providers: []
+  providers: [
+    SocialSharing,
+    Deeplinks,
+    SplashScreen,
+    StatusBar
+  ]
 })
 export class AppModule {}

@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 import { NavController } from 'ionic-angular';
 import { ItemDetailsPage } from '../item-details/item-details';
-import { SocialSharing } from 'ionic-native';
+import { SocialSharing } from '@ionic-native/social-sharing';
 
 @Component({
   selector: 'home-page',
@@ -10,7 +10,9 @@ import { SocialSharing } from 'ionic-native';
 export class HomePage {
   items = [];
 
-  constructor(private navCtrl: NavController) {
+  constructor(
+    private navCtrl: NavController,
+    public socialSharing: SocialSharing) {
 
     //this code is to build the dummy data of this example
     for(let i = 1; i < 4; i++) {
@@ -33,7 +35,7 @@ export class HomePage {
   shareItem(item) {
     //this code is to use the social sharing plugin
     // message, subject, file, url
-    SocialSharing.share("Check this item:  demoapp://home/items/" + item.id, item.title, item.img)
+    this.socialSharing.share("Check this item:  demoapp://home/items/" + item.id, item.title, item.img)
     .then(() => {
 
     })
